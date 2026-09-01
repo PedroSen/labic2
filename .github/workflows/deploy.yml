@@ -19,7 +19,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }} # 👈 Corrigido de "steps:deployment" para "steps.deployment"
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout o código
@@ -32,7 +32,7 @@ jobs:
           cache: 'npm'
 
       - name: Instalar dependências
-	run: npm ci --legacy-peer-deps
+        run: npm ci --legacy-peer-deps
 
       - name: Compilar o projeto (Build do Vite)
         run: npm run build
