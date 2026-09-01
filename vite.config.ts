@@ -6,3 +6,8 @@ export default defineConfig({
     plugins: [react()],
     base: "/"
 })
+
+export default defineConfig({
+  plugins: [react()],
+  base: '/labic2/', 
+})
