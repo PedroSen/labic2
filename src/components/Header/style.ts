@@ -75,6 +75,96 @@ export const StyledUlLi = styled.li`
     text-align: center;
 `;
 
+export const StyledRegistrationMenu = styled.div`
+    position: relative;
+`;
+
+export const StyledRegistrationButton = styled.button`
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: arial;
+    font-size: 1rem;
+    padding: 0.55rem 0.8rem;
+
+
+    &:hover {
+        text-shadow: 0 0 2rem rgba(255, 255, 255, 1);
+    }
+
+    @media (max-width: 1004px) {
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 920px) {
+        font-size: 0.8rem;
+    }
+`;
+
+export const StyledRegistrationDropdown = styled.div`
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: -110px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    background: var(--black);
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    transform-origin: top right;
+    animation: registrationDropdownIn 180ms ease-out both;
+    width: 200px;
+    box-shadow: 2px 8px 15px black;
+    line-height: 18px;
+
+
+    @keyframes registrationDropdownIn {
+        from {
+            opacity: 0;
+            transform: translateY(-0.4rem) scale(0.96);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        animation-duration: 1ms;
+    }
+
+    @media (max-width: 859px) {
+        padding: 0;
+        border: 1px solid #ffffff;
+        right: -39px;
+        width: 160px;
+    }
+
+`;
+
+export const StyledRegistrationLink = styled.a`
+    color: #ffffff;
+    font-family: arial;
+    font-size: 0.85rem;
+    padding: 0.65rem 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    
+
+    &:hover,
+    &:focus-visible {
+        background: #edb04e;
+        color: var(--black);
+        outline: none;
+    }
+
+    @media (max-width: 1004px) {
+        font-size: 0.8rem;
+    }
+`;
+
 export const StyledUlLink = styled(Link)<{ $isLive?: boolean }>`
     text-decoration: none;
     font-family: 'arial';
@@ -126,7 +216,7 @@ export const StyledHeaderResponsiveNav = styled.nav<{ isOpen: boolean }>`
     z-index: 10;
     height: 100vh;
     width: 15%;
-    min-width: 150px;
+    min-width: 180px;
     font-family: var(--poppins);
     font-size: 0.75rem;
     border-left: 0.2rem solid #ffffff;

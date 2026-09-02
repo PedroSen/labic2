@@ -54,7 +54,9 @@ const Home: FC = () => {
     };*/}
 
     const navItems: NavItems[] = [
-        { name: "INSCRIÇÕES ABERTAS", path: "https://forms.gle/JkxXue6jCF4g5R8K7" },
+        { name: "CHAMADA PÚBLICA", path: "https://docs.google.com/document/d/1Wclx30ZFLCvFYj9901GVeDDZvFEPwMztME08wGuoqS8/edit?usp=sharing" },
+        { name: "INSCRIÇÕES DE PROJETOS", path: "https://docs.google.com/forms/d/e/1FAIpQLSfWYHgNXmfvbXrZxzNKAl1DgOOVD-xW4J-WiauRkf0XxzBzJA/viewform" },
+        { name: "INSCRIÇÕES CURSO DE EXTENSÃO E COLABORADORES", path: "https://docs.google.com/forms/d/e/1FAIpQLSfaGWR2U_02WYzDSulAovAqQV8oJrNzBVndmAqDyywQAVfKfA/viewform" },
     ];
 
     const [isOpen, setIsOpen] = useState(false);
@@ -72,10 +74,10 @@ const Home: FC = () => {
                 </StyledBannerFigure>
                 <StyledBannerTextContainer>
                     <StyledBannerText>
-                        Inscrições abertas para a Rede de Formação que reúne lideranças, pesquisadores e comunicadores para 
+                        A Rede de Formação em Cultura Digital – Labic Maricá está com inscrições abertas até o dia 28 de outubro!
                     </StyledBannerText>
                     <StyledBannerText2>
-                        transformar a cultura digital nos territórios brasileiros.
+                        Se você lidera ou integra projetos, coletivos, cooperativas ou organizações sociais, inscreva sua iniciativa e conecte-se a uma rede focada em transformar a cultura digital no Brasil. 
                     </StyledBannerText2>
                 </StyledBannerTextContainer>
                 {/*<Button
@@ -134,20 +136,22 @@ const Home: FC = () => {
                 {<StyledFigure>
                     <StyledImage src={ArrowDownImage} alt="Seta para baixo" />
                 </StyledFigure>}
-                <StyledBannerAux>
+
                     <StyledBannerUl>
                         {navItems.map((item) => (
-                            <StyledBannerLink
-                                href={item.path}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={() => setIsOpen(false)}
-                                >
-                                    {item.name}
-                                </StyledBannerLink>
+                            <StyledBannerAux>
+                                <StyledBannerLink
+                                    href={item.path}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => setIsOpen(false)}
+                                    >
+                                        {item.name}
+                                    </StyledBannerLink>
+                                </StyledBannerAux>
                         ))}
                     </StyledBannerUl>
-                </StyledBannerAux>
+
                 {/*
                 {<StyledLiveBox>  
                     <Button

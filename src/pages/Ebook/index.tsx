@@ -1,4 +1,3 @@
-
 import {StyledContainer } from "./style";
 import SectionZero from "./components/SectionZero";
 import { useState } from "react";

@@ -26,10 +26,9 @@ export const StyledLogoFigure = styled.figure`
 
 export const StyledFooter = styled.div`
     display: flex;
-    padding: 3rem 6rem;
+    padding: 1rem 7rem;
     justify-content: space-between;
     align-items: center;
-    height: 30vh;
     background-color: var(--black);
     margin-top: 1rem;
 

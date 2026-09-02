@@ -5,25 +5,18 @@ import fundo from "../../../public/assets/images/LABIC_BRASIL/HOME BIOMAS.png";
 export const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: flex-start;
-    padding: 2rem 4rem 10rem 3rem;
-    width: 100%;
+    padding: 2rem 4rem 0.3rem 3rem;
+    min-height: 1080px;
     gap: 2rem;
     position: relative;
     overflow: hidden;
     background-image: url(${fundo});
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     background-size: cover;
     filter: drop-shadow(5px 20px 50px rgba(0, 0, 0, 0.5));
 
-    @media (max-width: 1250px) {
-        background-size: 1250px;
-    }
-
-    @media (max-width: 540px) {
-        gap: 0.5rem;
+    @media (max-width: 1700px) {
+        background-size: auto;
     }
 `;
 
@@ -33,16 +26,26 @@ export const StyledBannerTextContainer = styled.div`
     justify-content: center;
     padding-left: 35px;
 
-    @media (max-width: 1448px) {
-        padding-left: 10px;
-    }
-
-    @media (max-width: 540px) {
-        width: 100%;
+    @media (max-width: 1699px) {
         padding-left: 0;
     }
 `;
+
 export const StyledBannerText = styled.p`
+    font-family: var(--poppins);
+    font-size: 1.4rem;
+    color: var(--black);
+    font-weight: bold;
+    max-width: 350px;
+    line-height: 22px;
+    margin-bottom: 30px;
+
+    @media (max-width: 1699px) {
+        text-align: justify;
+    }
+`;
+
+export const StyledBannerText2 = styled.p`
     font-family: var(--poppins);
     font-size: 1.4rem;
     font-weight: 500;
@@ -50,32 +53,57 @@ export const StyledBannerText = styled.p`
     max-width: 350px;
     line-height: 22px;
 
-    @media (max-width: 1448px) {
-        text-align: left;
-        width: 100%;
-        max-width: 250px;
-        font-size: 1rem;
+    @media (max-width: 1699px) {
+        text-align: justify;
     }
 `;
-export const StyledBannerText2 = styled.p`
-    font-family: var(--poppins);
-    font-size: 1.4rem;
-    color: var(--black);
-    font-weight: bold;
-    max-width: 350px;
-    line-height: 22px;
 
-    @media (max-width: 1448px) {
-        text-align: left;
+
+export const StyledBannerUl = styled.ul`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+    @media (max-width: 540px) {
         width: 100%;
-        max-width: 250px;
-        font-size: 1rem;
+        padding: 0;
     }
 `;
+
+export const StyledBannerLi = styled.li``;
+
+export const StyledBannerAux = styled.div`
+    display: flex;    
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.75rem;
+    transition: transform 0.5s;
+    background-color: #BE4425;
+    width: 520px;
+    height: max-content;
+    padding: 0.7rem 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.8);
+    }
+    @media (max-width: 650px) {
+        width: 300px;
+    }
+`
 
 export const StyledBannerLink = styled.a`
   text-decoration: none;
-  font-size: 30px;
+  font-size: 1.7rem;
   text-align: center;
   justify-content: center;
   transition: text-shadow 0.3s;
@@ -87,73 +115,23 @@ export const StyledBannerLink = styled.a`
     text-shadow: 0 0 2rem rgba(255, 255, 255, 1);
   }
 
-  @media (max-width: 587px) {
-    text-align: center;
+  @media (max-width: 650px) {
     font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 `;
-
-export const StyledBannerUl = styled.ul`
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    flex-wrap: wrap;
-    text-align: center;
-
-    @media (max-width: 1400px) {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    @media (max-width: 540px) {
-        width: 100%;
-        padding: 0;
-    }
-`;
-
-export const StyledBannerLi = styled.li`
-    @media (max-width: 1400px) {
-        text-align: center;
-    }
-`;
-
-export const StyledBannerAux = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    border: none;
-    border-radius: 0.75rem;
-    transition: transform 0.5s;
-    background-color: #BE4425;
-    max-width: 800px;
-    max-height: 150px;
-    padding: 0.7rem 4rem;
-
-    &:hover {
-        transform: scale(1.05);
-    }
-
-    &:active {
-        transform: scale(0.8);
-    }
-`
 
 export const StyledBannerContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 2rem;
     margin-top: 2.2rem;
 
-    @media (max-width: 1448px) {
-        justify-content: space-between;
-        gap: 1rem;
+    @media (max-width: 1699px) {
+        align-items: center;
     }
     @media (max-width: 540px) {
         width: 100%;
-        padding: 3rem 0;
     }
 `;
 
@@ -176,7 +154,7 @@ export const StyledBannerImage = styled.img`
     width: 515px;
     height: 223px;
 
-    @media (max-width: 540px) {
+    @media (max-width: 580px) {
         width: 100%;
         height: auto;
     }
@@ -207,8 +185,8 @@ export const StyledLinksContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10rem;
     width: 100%;
+    margin-top: 2rem;
 
     @media (max-width: 1448px) {
         margin: 1rem;
@@ -280,10 +258,6 @@ export const StyledFigure = styled.figure`
 
 export const StyledImage = styled.img`
     width: 6rem;
-
-    @media (max-width: 540px) {
-        width: 3rem;
-    }
 `;
 
 export const StyledLiveBox = styled.div`
