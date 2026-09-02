@@ -4,16 +4,22 @@ import fundo from "../../../public/assets/images/LABIC_BRASIL/HOME BIOMAS.png";
 
 export const StyledContainer = styled.div`
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem 4rem 0.3rem 3rem;
-    min-height: 1080px;
-    gap: 2rem;
-    position: relative;
-    overflow: hidden;
-    background-image: url(${fundo});
-    background-size: cover;
-    filter: drop-shadow(5px 20px 50px rgba(0, 0, 0, 0.5));
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem 4rem 0.3rem 3rem;
+      padding-top: 2rem;
+      gap: 2rem;
+      position: relative;
+      overflow: hidden;
+      background-image: url("/labic2/assets/HOME%20BIOMAS-WKFhdnzZ.png");
+      background-size: cover;
+      filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 20px 50px);
+      background-position: right right;
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 100vh;
+      border-radius: 100px;
+
 
     @media (max-width: 1700px) {
         background-size: auto;
