@@ -11,7 +11,7 @@ export const StyledContainer = styled.div`
       gap: 2rem;
       position: relative;
       overflow: hidden;
-      background-image: url("/labic2/assets/HOME%20BIOMAS-WKFhdnzZ.png");
+      background-image: url(${fundo});
       background-size: cover;
       filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 20px 50px);
       background-position: right right;
